@@ -19,7 +19,7 @@
 
     <body>
         <div class="banner">
-            <img src="static/shard.jpg" alt="Link Image" class="side-tab-link" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offExample">    
+            <img src="/static/side-icon.png" alt="Link Image" class="side-tab-link" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offExample">    
         </div>
         <div class="offcanvas offcanvas-end side-tab" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
             <div class="offcanvas-header">
@@ -57,12 +57,15 @@
                 </nav>
             </div>
         </div>
-
-        <iframe class="hero" src="https://player.vimeo.com/video/887977893?autoplay=1&amp;loop=1&amp;quality_selector=1&amp;player_id=0&amp;muted=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Hero"></iframe>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/889462993?autoplay=1&amp;loop=1&amp;muted=1&amp;controls=0" class="hero" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen muted></iframe>
+        </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
         
-        <div class="transparent-hero"></div>
-
+        <div class="logo-div">
+            <img class="logo" src="/static/logo-anim.gif">
+            <h1 class="slogan">Your Software Solutions - Sorted</h1>
+        </div>
         <div class="section">
             <div class="section-left">
                 <p class= "heading hidden">Perfection - Redefined</p>
@@ -77,11 +80,34 @@
                 </p>
             </div>
             <div class="section-right">
-                <img class="section-image" src="/static/dev1.jpg">
+                <img class="off-screen section-image" src="/static/dev1.jpg">
             </div>
-            </div>
-        <hr>
-        <div class="section">
         </div>
+        <div class="black-back">
+            <div class="divider div-transparent div-arrow-down compressed"></div>
+        </div>
+        
+        <div class="section section2">
+            <a class="img-link" href="/">
+                <img src="/static/our-work.webp" class="img-colection">
+            </a>
+            <div class="vert-divider"></div>
+            <a class="img-link" href="/">
+                <img src="/static/contact-us.png" class="img-colection">
+            </a>
+            <div class="vert-divider"></div>
+            <a class="img-link" href="/">
+                <img src="/static/stay-in-touch.png" class="img-colection">
+            </a>
+        </div>
+
+        <footer class="foot display_cont">            
+            <div class="left-footer">
+                Contact Email: abdllaa165@gmail.com
+            </div>
+            <div class="right-footer">
+                <a class="rightlink" href="https://www.instagram.com/stardrakesolutions/">Instagram</a>
+            </div>
+        </footer>
     </body>
 </html>
