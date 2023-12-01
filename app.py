@@ -14,8 +14,15 @@ def index():
         return render_template("index.html")
     
 @app.route("/contactus", methods=["GET", "POST"])
-def index():
+def contactus():
     if request.method == "POST":
         return 0
     else:
         return render_template("contact-us.html")
+    
+@app.route("/ourwork", methods=["GET", "POST"])
+def ourwork():
+    if request.method == "POST":
+        return 0
+    else:
+        return render_template("our-work.html")    
