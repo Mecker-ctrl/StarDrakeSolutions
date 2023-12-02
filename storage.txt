@@ -1,0 +1,31 @@
+
+
+
+
+<div class="gallery">
+    <div class="gallery-element">
+        <a>
+            <img class="" src="/static/media/ourwork//watch.png">
+        </a>
+    </div>
+    <div class="gallery-element">
+        <a>
+            <img class="gallery-img" src="/static/media/ourwork/maryelle.png">
+        </a>
+    </div>
+    <div class="gallery-element">
+        <a>
+            <img class="gallery-img" src="/static/media/ourwork/maryelle-shop.png">
+        </a>
+    </div>
+    <div class="gallery-element">
+        <a>
+            <img class="gallery-img" src="/static/media/ourwork/wv.png">
+        </a>
+    </div>
+</div>
+
+.gallery-element  {
+  width: 30vw;
+  text-align: center;
+}

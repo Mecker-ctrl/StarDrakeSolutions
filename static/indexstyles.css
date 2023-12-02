@@ -326,21 +326,35 @@ body{
   .gallery{
     flex-direction: column;
   }
-  .gallery-element  {
-    margin-top: 3%;
-  }
-}
-.gallery-element  {
-  width: 30vw;
-  text-align: center;
 }
 .gallery-img  {
   width: 70%;
-  transition: all 2s;
+  transition: all 0.5s;
   border: 2px solid white;
   border-radius: 5%;
 }
 .gallery-img:hover  {
-  scale: 1.75;
+  scale: 2.5;
   transition: all 1s;
+}
+.gallery-element{
+  text-align: center;
+  margin-bottom: 3vw;
+}
+.products-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.product-table {
+  margin: auto;
+}
+.my-col {
+  display: flex;
+  justify-content: center;
+}
+.product-desc {
+  font-size: clamp(0.5rem, 1vw, 600px);
+  color: white;
+  text-align: center;
+  margin-top: 1vw;
 }
