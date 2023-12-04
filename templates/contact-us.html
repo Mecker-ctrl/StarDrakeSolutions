@@ -7,19 +7,32 @@
 </div>
 
 <div class="contact-us">
-    <form action="https://formspree.io/f/xbjvvwvb" method="POST">
-        <label>Your Email - <strong>Please ensure it is correct</strong></label>
+    <div class="alert alert-dark" role="alert" id="captchaAlert">
+        A simple dark alert—check it out!
+    </div>
+    <form action="https://formspree.io/f/xbjvvwvb" method="POST" id="contactform">
+        <label><strong>Please ensure your details are correct</strong></label>
         <div class="input-group mb-3 email-div">
-            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+            <span class="input-group-text" id="inputGroup-sizing-default">Your Email</span>
             <input id="email" name="email" type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
         </div>
-        <label>Your Message</label>
         <div class="form-floating">
-            <textarea name="message" class="form-control" placeholder="Leave a message here" id="floatingTextarea2" required></textarea>
+            <textarea name="message" class="form-control" id="floatingTextarea2" required></textarea>
             <label for="floatingTextarea2">Leave a message here...</label>
         </div>
         <br>    
-        <input type="submit" class="btn btn-light submit-message"value="Submit">
+        <div class="g-recaptcha" id="recaptcha" data-sitekey="6LdHnSUpAAAAAA3sP9fFqOTRK2fY6my-kzCrRfhR"></div>
+        <br>    
+        <input type="submit" class="btn btn-light submit-message" value="Submit">
     </form>
+    <script>
+        document.getElementById("contactform").addEventListener("submit", function(event) {
+        var recaptcha = document.getElementById("recaptcha");
+        if (!recaptcha || grecaptcha.getResponse() === "") {
+            event.preventDefault(); 
+            alert("Please complete the reCAPTCHA!");
+        }
+    });
+    </script>
 </div>
 {% endblock %}

@@ -1,24 +1,16 @@
-let lastScrollTop = 0;
+document.addEventListener('scroll', function() {
+    var galItems = document.getElementsByClassName("gallery-element");
 
-// document.addEventListener('scroll', function() {
-//     let fadeDiv = document.getElementById('hero-id');
-//     let currentOpacity = window.getComputedStyle(fadeDiv).opacity;
-//     let scrollTop = window.scrollY;
+    Array.from(galItems).forEach(element => {
+        element.addEventListener('mouseenter', function(){
+            element.style.zIndex = 10;
+        });
     
-//     if (scrollTop < 15) {
-//         fadeDiv.style.opacity = 1;
-//     } 
-//     else if (scrollTop > lastScrollTop) {
-//         // Scrolling down
-//         fadeDiv.style.opacity = Math.max(0, parseFloat(currentOpacity) - 0.025);
-//     } 
-//     else {
-//         // Scrolling up
-//         fadeDiv.style.opacity = Math.min(1, parseFloat(currentOpacity) + 0.025);
-//     }
-
-//     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-// });
+        element.addEventListener('mouseleave', function(){
+            element.style.zIndex = 0;
+        });
+    });
+});
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,6 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 else if(classes.contains("off-screen")){
                     transform(entry, "slide-in", "off-screen")
                 }
+                else if(classes.contains("off-screen-down")){
+                    if(classes.contains("first")){
+                        transform(entry, "slide-in-up-first", "off-screen-down")
+                    }
+                    else{
+                        transform(entry, "slide-in-up", "off-screen-down")
+                    }
+                }
                 else if(classes.contains("compressed")){
                     transform(entry, "expanded", "compressed")
                 }
@@ -43,12 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 {
                     transform(entry, "hidden", "show")
                 } 
-                else if(classes.contains("slide-in")){
-                    transform(entry, "off-screen", "slide-in")
-                }
-                else if(classes.contains("expanded")){
-                    transform(entry, "compressed", "expanded")
-                }
             }
         });
     });
@@ -56,10 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const divhid = document.querySelectorAll('.hidden');
     const divoff = document.querySelectorAll('.off-screen');
     const divcomp = document.querySelectorAll('.compressed');
+    const divdown = document.querySelectorAll('.off-screen-down');
 
     divoff.forEach((el) => observer.observe(el));
     divhid.forEach((el) => observer.observe(el));
     divcomp.forEach((el) => observer.observe(el));
+    divdown.forEach((el) => observer.observe(el));
 });
 
 

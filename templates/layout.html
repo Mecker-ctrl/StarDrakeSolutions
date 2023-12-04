@@ -9,6 +9,8 @@
         <!-- http://getbootstrap.com/docs/5.3/ -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!-- Recaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
         <link href="/static/indexstyles.css" rel="stylesheet">
         <script src="/static/script.js"></script>
@@ -30,7 +32,6 @@
         </div>
         <div class="offcanvas offcanvas-end side-tab" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
             <div class="offcanvas-header">
-            <h1 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h1>
             <button type="button" id="close-button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body" id="offcanvas-container">
@@ -46,29 +47,20 @@
                     </ul>
                 </div>
                 -->
-                <nav class="dropdown">
-                    <h2 class="drop-header toggle">Drop Down Menu</h2>
-                    <ul class="dropdown-content">
-                        <li><a href="#chapter1">Chapter 01</a></li>
-                        <li><a href="#chapter2">Chapter 02</a></li>
-                        <li><a href="#chapter3">Chapter 03</a></li>
-                    </ul>
-                </nav>
-                <nav class="dropdown">
-                    <h2 class="drop-header toggle">Drop Down Menu</h2>
-                    <ul class="dropdown-content">
-                        <li><a href="#chapter1">Chapter 01</a></li>
-                        <li><a href="#chapter2">Chapter 02</a></li>
-                        <li><a href="#chapter3">Chapter 03</a></li>
-                    </ul>
-                </nav>
+                <h2 class="drop-header"><a href="/" class="droplink">Home</a></h2>
+
+                <h2 class="drop-header"><a href="/ourwork" class="droplink">Our Work</a></h2>
+
+                <h2 class="drop-header"><a href="/contactus" class="droplink">Contact Us</a></h2>
             </div>
         </div>
         {% block body %}{% endblock %}
 
+        <hr>
+
         <footer class="foot display_cont">            
             <div class="left-footer">
-                Contact Email: abdllaa165@gmail.com
+                Contact Email: stardrakesolutions@gmail.com
             </div>
             <div class="right-footer">
                 <a class="rightlink" href="https://www.instagram.com/stardrakesolutions/">Instagram</a>
