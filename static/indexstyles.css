@@ -8,7 +8,8 @@ body{
   width: 100%;
   position: sticky;
   top: 0%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
   height: 6vh;
   z-index: 10;
 }
@@ -21,12 +22,6 @@ body{
   padding-left: 5%;
   width: clamp(1.5in, 14vw, 20vw);
 }
-@media screen and (max-width: 700px) {
-  .banner-logo{
-    display: none; /* Hide the div when screen width is less than 700px */
-  }
-}
-
 .side-tab-link{
     position: fixed;
     right: 1%;
